@@ -30,19 +30,29 @@
     {
       "machineName": "H5P.Question",
       "majorVersion": 1,
-      "minorVersion": 4
+      "minorVersion": 5
     },
     {
       "machineName": "H5P.JoubelUI",
       "majorVersion": 1,
-      "minorVersion": 3
+      "minorVersion": 4
+    },
+    {
+      "machineName": "FontKidsLoop",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ],
   "editorDependencies": [
     {
       "machineName": "H5PEditor.ColorSelector",
       "majorVersion": 1,
-      "minorVersion": 2
+      "minorVersion": 4
+    },
+    {
+      "machineName": "EditorFontKidsLoop",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ]
 }

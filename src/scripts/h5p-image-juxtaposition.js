@@ -161,12 +161,28 @@ class ImageJuxtaposition extends H5P.Question {
       taskDescriptionHeight = Math.ceil(this.taskDescription.offsetHeight + margin);
     }
 
-    const dimensionsMax = (isInFullScreen) ?
+    let dimensionsMax = (isInFullScreen) ?
       {
         height: window.innerHeight - taskDescriptionHeight,
         width: window.innerWidth,
       } :
       undefined;
+
+    if (!dimensionsMax) {
+      let displayLimits = (
+        this.isRoot() &&
+        H5P.KLDisplay && H5P.KLDisplay.computeDisplayLimitsKLL
+      ) ?
+        H5P.KLDisplay.computeDisplayLimitsKLL(this.containerH5P) :
+        null;
+
+      if (displayLimits) {
+        dimensionsMax = {
+          height: displayLimits.height - taskDescriptionHeight,
+          width: displayLimits.width
+        }
+      }
+    }
 
     this.slider.resize(dimensionsMax);
   }

@@ -169,7 +169,7 @@ class ImageJuxtaposition extends H5P.Question {
       undefined;
 
     if (!dimensionsMax) {
-      let displayLimits = (
+      const displayLimits = (
         this.isRoot() &&
         H5P.KLDisplay && H5P.KLDisplay.computeDisplayLimitsKLL
       ) ?
@@ -180,7 +180,7 @@ class ImageJuxtaposition extends H5P.Question {
         dimensionsMax = {
           height: displayLimits.height - taskDescriptionHeight,
           width: displayLimits.width
-        }
+        };
       }
     }
 
